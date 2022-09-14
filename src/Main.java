@@ -1,8 +1,10 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-    int [] weights =  {90,91,93,92,85,87,88,89,0,0,0,0};
+        int[] weights = {90, 91, 93, 92, 85, 87, 88, 89, 0, 0, 0, 0};
         weights[0] = 90;
         int januaryWeight = weights[0];
         System.out.println(januaryWeight);
@@ -15,48 +17,53 @@ public class Main {
         }
 
 
-
-
-
-
 //Задание 1 Объявите три массива:
 //1. Целочисленный массив, заполненный тремя цифрами – 1, 2 и 3 – с помощью ключевого слова new.
 
-        int[] inBox = new int[1];
-        int[] inBox1 = new int[2];
-        int[] inBox2 = new int[3];
-        int[] cars = new int [] {1,2,3};
-
+        int[] inBox = new int[3];
+        inBox[0] = 1;
+        inBox[1] = 2;
+        inBox[2] = 3;
 // Массив, в котором можно хранить три дробных числа – 1.57, 7.654, 9.986 –  сразу заполнив его значениями.
 
-    double[] share = new double[]{1.57,7.654,9.986};
+        double[] share = new double[]{1.57, 7.654, 9.986};
 
 //Создать любой массив.
-        int [] key = {2,4,8,6,4,6};
+        int[] key = {2, 4, 8, 6, 4, 6};
 
         //Задание 2 Пройдите по каждому из трех массивов и распечатайте все элементы всех трех массивов,
         // начиная с первого элемента, через запятую. Запятая между последним элементом одного массива и первым элементом следующего не нужна.
 
-        int[] cars1 = new int [] {1,2,3};
+        int[] cars1 = new int[3];
         cars1[0] = 1;
         cars1[1] = 2;
         cars1[2] = 3;
-        System.out.println(cars1[0] + ", " + cars1[1] +", " + cars1[2]);
+        for (int i = 3; cars1.length >= i; i++) {
+            System.out.println(Arrays.toString(cars1));
+        }
 
-        double[] share1 = new double[]{1.57,7.654,9.986};
+
+        double[] share1 = new double[3];
         share1[0] = 1.57;
         share1[1] = 7.654;
         share1[2] = 9.986;
-        System.out.println(share1[0] + ", " + share1[1] +", " + share1[2]);
+        for (int i = 3; share1.length >= i; i++) {
+            System.out.println(Arrays.toString(share1));
 
-        int [] key1 = {2,4,8,6,4,6};
+        }
+
+
+        int[] key1 = new int[6];
         key1[0] = 2;
         key1[1] = 4;
         key1[2] = 8;
         key1[3] = 6;
         key1[4] = 4;
         key1[5] = 6;
-        System.out.println(key1[0] + ", " + key1[1] +", " + key1[2] + ", " + key1[3] + ", " + key1[4] +", " + key1[5]);
+        for (int i = 6; key1.length >= i; i++) {
+            System.out.println(Arrays.toString(key1));
+
+        }
 
         //Задание 3 Теперь ваша задача – распечатать все элементы всех трех массивов, но начинать нужно не с первого элемента массива, а с последнего. Элементы должны быть распечатаны через запятую, при этом элементы одного массива располагаются на одной строчке, а элементы другого массива – на другой.
         //
@@ -78,69 +85,61 @@ public class Main {
         //*произвольные элементы третьего массива в обратном порядке*
 
 
+        int[] cars11 = {1, 2, 3};
+        for (int i = cars11.length - 1; 0<= i; i--) {
 
-        int[] cars11 = new int [] {1,2,3};
-        cars1[2] = 3;
-        cars1[1] = 2;
-        cars1[0] = 1;
-        System.out.println(cars11[2] + ", " + cars11[1] +", " + cars11[0]);
-
-        double[] share11 = new double[3];
-        share11[2] = 9.986;
-        share11[1] = 7.654;
-        share11[0] = 1.57;
-        System.out.println(share11[2] + ", " + share11[1] +", " + share11[0]);
-
-        int [] key11 = new int [6];
-        key11[5] = 6;
-        key11[4] = 4;
-        key11[3] = 6;
-        key11[2] = 8;
-        key11[1] = 4;
-        key11[0] = 2;
-        System.out.println(key11[5] + ", " + key11[4] +", " + key11[3] + ", " + key11[2] + ", " + key11[1] +", " + key11[0]);
-
-        //Задание 4 Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными (нужно прибавить 1).
-        //
-        //Важно: код должен работать с любым целочисленным массивом, поэтому для решения задания вам нужно использовать циклы.
-        //
-        //Распечатайте результат преобразования в консоль.
-        //
-
-
-        int[] cars12 = new int [3];
-        cars12[0] = 1;
-        cars12[1] = 2;
-        cars12[2] = 3;
-        int car = cars12[0];
-
-        for (int i = 0; i < cars12.length; i++  ) {
-            if (cars12[0] % 2 == 1) {
-                cars12[0]++;
-                System.out.println(cars12[0]);
-            }
-            if (cars12[1] % 2 == 0) {
-
-                System.out.println(cars12[1]);
-
-                if (cars12[2] % 2 == 1) {
-                    cars12[2]++;
-                    System.out.println(cars12[2]);
-                }
-            }
-
-
+            System.out.println(cars11[i]);
         }
 
 
+        double[] share11 = new double[3];
+        share11[0] = 1.57;
+        share11[1] = 7.654;
+        share11[2] = 9.986;
+        for (int i = share11.length - 1; i >= 0; i--) {
+
+            System.out.println(share11[i]);
+        }
 
 
+            int[] key11 = new int[6];
+            key11[0] = 2;
+            key11[1] = 4;
+            key11[2] = 8;
+            key11[3] = 6;
+            key11[4] = 4;
+            key11[5] = 6;
+        for (int t = key11.length - 1; t >= 0; t--) {
+
+            System.out.println(key11[t]);
+        }
+
+            //Задание 4 Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными (нужно прибавить 1).
+            //
+            //Важно: код должен работать с любым целочисленным массивом, поэтому для решения задания вам нужно использовать циклы.
+            //
+            //Распечатайте результат преобразования в консоль.
+            //
 
 
+            int[] cars12 = new int[3];
+            cars12[0] = 1;
+            cars12[1] = 2;
+            cars12[2] = 3;
+            int car = cars12[0];
+
+            for (int p = 0; p < cars12.length; p++) {
+                if (cars12[p] % 2 == 1) {
+                    cars12[p]++;
+                    System.out.println(cars12[p]);
+                } else if (cars12[p] % 2 == 0) {
+                    System.out.println(cars12[p]);
 
 
+                }
 
 
+            }
 
     }
 }
