@@ -38,8 +38,11 @@ public class Main {
         cars1[0] = 1;
         cars1[1] = 2;
         cars1[2] = 3;
-        for (int i = 3; cars1.length >= i; i++) {
-            System.out.println(Arrays.toString(cars1));
+        for (int i = 0; cars1.length > i; i++) {
+            if (i == cars1.length - 1) {
+                System.out.print(cars1[i] + "---");
+            } else
+                System.out.print(cars1[i] + ",");
         }
 
 
@@ -47,8 +50,11 @@ public class Main {
         share1[0] = 1.57;
         share1[1] = 7.654;
         share1[2] = 9.986;
-        for (int i = 3; share1.length >= i; i++) {
-            System.out.println(Arrays.toString(share1));
+        for (int i = 0; share1.length > i; i++) {
+            if (i == share1.length - 1) {
+                System.out.print(share1[i] + "---");
+            } else
+                System.out.print(share1[i] + ",");
 
         }
 
@@ -60,8 +66,11 @@ public class Main {
         key1[3] = 6;
         key1[4] = 4;
         key1[5] = 6;
-        for (int i = 6; key1.length >= i; i++) {
-            System.out.println(Arrays.toString(key1));
+        for (int i = 0; key1.length > i; i++) {
+            if (i == key1.length - 1) {
+                System.out.print(key1[i] + "---");
+            } else
+                System.out.print(key1[i] + ",");
 
         }
 
@@ -85,10 +94,15 @@ public class Main {
         //*произвольные элементы третьего массива в обратном порядке*
 
 
-        int[] cars11 = {1, 2, 3};
-        for (int i = cars11.length - 1; 0<= i; i--) {
-
-            System.out.println(cars11[i]);
+        int[] cars11 = new int[3];
+        cars11[0] = 1;
+        cars11[1] = 2;
+        cars11[2] = 3;
+        for (int i = cars11.length - 1; i >= 0; i--) {
+            if (i == cars11.length - 3) {
+                System.out.print(cars11[i] + "---");
+            } else
+                System.out.print(cars11[i] + ",");
         }
 
 
@@ -97,49 +111,51 @@ public class Main {
         share11[1] = 7.654;
         share11[2] = 9.986;
         for (int i = share11.length - 1; i >= 0; i--) {
-
-            System.out.println(share11[i]);
+            if (i == share11.length - 3) {
+                System.out.print(share11[i] + "---");
+            } else
+                System.out.print(share11[i] + ",");
         }
 
 
-            int[] key11 = new int[6];
-            key11[0] = 2;
-            key11[1] = 4;
-            key11[2] = 8;
-            key11[3] = 6;
-            key11[4] = 4;
-            key11[5] = 6;
+        int[] key11 = new int[6];
+        key11[0] = 2;
+        key11[1] = 4;
+        key11[2] = 8;
+        key11[3] = 6;
+        key11[4] = 4;
+        key11[5] = 6;
         for (int t = key11.length - 1; t >= 0; t--) {
-
-            System.out.println(key11[t]);
+            if (t == key11.length - 6) {
+                System.out.print(key11[t] + "---");
+            } else
+                System.out.print(key11[t] + ",");
         }
 
-            //Задание 4 Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными (нужно прибавить 1).
-            //
-            //Важно: код должен работать с любым целочисленным массивом, поэтому для решения задания вам нужно использовать циклы.
-            //
-            //Распечатайте результат преобразования в консоль.
-            //
+        //Задание 4 Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными (нужно прибавить 1).
+        //
+        //Важно: код должен работать с любым целочисленным массивом, поэтому для решения задания вам нужно использовать циклы.
+        //
+        //Распечатайте результат преобразования в консоль.
+        //
 
 
-            int[] cars12 = new int[3];
-            cars12[0] = 1;
-            cars12[1] = 2;
-            cars12[2] = 3;
-            int car = cars12[0];
+        int[] cars12 = new int[3];
+        cars12[0] = 1;
+        cars12[1] = 2;
+        cars12[2] = 3;
+        int car = cars12[0];
 
-            for (int p = 0; p < cars12.length; p++) {
-                if (cars12[p] % 2 == 1) {
-                    cars12[p]++;
-                    System.out.println(cars12[p]);
-                } else if (cars12[p] % 2 == 0) {
-                    System.out.println(cars12[p]);
-
-
-                }
-
-
-            }
+        for (int p = 0; p < cars12.length; p++) {
+            if (cars12[p] % 2 == 1) {
+                cars12[p]++;
+                System.out.print(cars12[p]);
+            } else if (cars12[p] % 2 == 0) {
+            System.out.print(cars12[p]);
+        }
 
     }
+
 }
+    }
+
